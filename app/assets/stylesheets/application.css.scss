@@ -66,7 +66,7 @@ pre {
 }
 
 div#wrap {
-    background: url("header.jpg") repeat scroll 0 0 transparent;
+    background: asset-data-url("header.jpg") repeat scroll 0 0 transparent;
     float: left;
     height: 193px;
     width: 100%;
@@ -83,7 +83,7 @@ div#wrap-sup {
 }
 
 div#header {
-    background-image: url("headbg.jpg");
+    background-image: asset-data-url("headbg.jpg");
     border: 0 solid silver;
     height: 193px;
     margin-top: -5px;
@@ -93,7 +93,7 @@ div#header {
 }
 
 div#logo_embl {
-    background: url("emblema_viti_ntuu.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+    background: asset-data-url("emblema_viti_ntuu.png") no-repeat scroll center center rgba(0, 0, 0, 0);
     float: left;
     height: 186px;
     margin-left: 1px;
@@ -104,7 +104,7 @@ div#logo_embl {
 }
 
 div#slogan {
-    background: url("slogan.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    background: asset-data-url('slogan.png') no-repeat scroll 0 0 rgba(0, 0, 0, 0);
     height: 150px;
     margin-left: 226px;
     margin-top: 5px;
@@ -115,8 +115,7 @@ div#slogan {
 }
 
 div#logo_fvp {
-    background-image: asset-data-url("fvp.png");
-    background: no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    background: asset-data-url('fvp.png') no-repeat scroll 0 0 rgba(0, 0, 0, 0);
     float: right;
     height: 186px;
     position: relative;
@@ -144,7 +143,7 @@ div#logo_fvp {
 }
 
 #tabs ul li a {
-    background-image: url("menu.png");
+    background-image: asset-data-url("menu.png");
     background-repeat: repeat;
     color: #fcffe8;
     display: block;
@@ -205,7 +204,7 @@ div#logo_fvp {
 }
 
 div#centertop {
-    background: url("img1.jpg") repeat scroll 0 0 transparent;
+    background: asset-data-url("img1.jpg") repeat scroll 0 0 transparent;
     float: left;
     width: 100%;
 }
@@ -347,19 +346,19 @@ div#leftpanel a img {
 }
 
 div#leftpanel_top {
-    background-image: url("leftpanel_top.png");
+    background-image: asset-data-url("leftpanel_top.png");
     background-position: center top;
     background-repeat: no-repeat;
     padding: 15px 0 0;
 }
 
 div#leftpanel_center {
-    background-image: url("leftpanel_center.png");
+    background-image: asset-data-url("leftpanel_center.png");
     background-repeat: repeat-y;
 }
 
 div#leftpanel_bottom {
-    background: url("leftpanel_bottom.png") no-repeat scroll center bottom rgba(0, 0, 0, 0);
+    background: asset-data-url("leftpanel_bottom.png") no-repeat scroll center bottom rgba(0, 0, 0, 0);
     padding: 0 0 15px;
 }
 
@@ -395,27 +394,27 @@ div#rightpanel a img {
 }
 
 div#rightpanel_top {
-    background-image: url("rightpanel_top.png");
+    background-image: asset-data-url("rightpanel_top.png");
     background-position: center top;
     background-repeat: no-repeat;
     padding-top: 16px;
 }
 
 div#rightpanel_center {
-    background-image: url("rightpanel_center.png");
+    background-image: asset-data-url("rightpanel_center.png");
     background-position: center top;
     background-repeat: repeat-y;
 }
 
 div#rightpanel_bottom {
-    background-image: url("rightpanel_bottom.png");
+    background-image: asset-data-url("rightpanel_bottom.png");
     background-position: center bottom;
     background-repeat: no-repeat;
     padding-bottom: 13px;
 }
 
 div#centerftr {
-    background: url("img2.png") repeat-x scroll 0 0 #353127;
+    background: asset-data-url("img2.png") repeat-x scroll 0 0 #353127;
     float: left;
     width: 100%;
 }
@@ -460,7 +459,7 @@ div#footer tr td a:hover {
 }
 
 .pop_post {
-    background: url("news_disactive.png") no-repeat scroll left center rgba(0, 0, 0, 0);
+    background: asset-data-url("news_disactive.png") no-repeat scroll left center rgba(0, 0, 0, 0);
     display: block;
     min-height: 22px;
 }
@@ -475,7 +474,7 @@ div#footer tr td a:hover {
 }
 
 .pop_post:hover {
-    background: url("news.png") no-repeat scroll left center rgba(0, 0, 0, 0);
+    background: asset-data-url("news.png") no-repeat scroll left center rgba(0, 0, 0, 0);
     color: #d9d9d9;
     text-decoration: underline;
 }
@@ -521,7 +520,7 @@ div#footer tr td a:hover {
 }
 
 .kafedri {
-    background: url("star.png") no-repeat scroll 100% 0 rgba(0, 0, 0, 0);
+    background: asset-data-url("star.png") no-repeat scroll 100% 0 rgba(0, 0, 0, 0);
     display: block;
     min-height: 16px;
 }
@@ -536,7 +535,7 @@ div#footer tr td a:hover {
 }
 
 .kafedri:hover {
-    background: url("star_disactive.png") no-repeat scroll 100% 0 rgba(0, 0, 0, 0);
+    background: asset-data-url("star_disactive.png") no-repeat scroll 100% 0 rgba(0, 0, 0, 0);
     color: #d9d9d9;
     text-decoration: underline;
 }
@@ -676,13 +675,13 @@ ul {
 }
 
 .hist_mid {
-    background: url("scroll-stock-mid.jpg") repeat scroll 0 0 rgba(0, 0, 0, 0);
+    background: asset-data-url("scroll-stock-mid.jpg") repeat scroll 0 0 rgba(0, 0, 0, 0);
     margin-top: 15px;
     padding: 0 20px;
 }
 
 .hist_bot {
-    background: url("scroll-stock-bot.jpg") repeat scroll 0 0 rgba(0, 0, 0, 0);
+    background: asset-data-url("scroll-stock-bot.jpg") repeat scroll 0 0 rgba(0, 0, 0, 0);
     height: 127px;
 }
 
@@ -748,7 +747,7 @@ div#content p.file_link_none {
 
 .file_link::before {
     background-color: #2591b4;
-    background-image: url("right_arrow.png");
+    background-image: asset-data-url("right_arrow.png");
     background-position: center center;
     background-repeat: no-repeat;
     border-radius: 50%;
@@ -777,15 +776,15 @@ div#content p.file_link_none {
 }
 
 .docx {
-    background-image: url("docx.png");
+    background-image: asset-data-url("docx.png");
 }
 
 .xlsx {
-    background-image: url("xlsx.png");
+    background-image: asset-data-url("xlsx.png");
 }
 
 .url {
-    background-image: url("url.png");
+    background-image: asset-data-url("url.png");
 }
 
 .hot {}
@@ -951,14 +950,14 @@ body {
 .contact_form input:required,
 .contact_form textarea:required,
 .contact_form select:required {
-    background: url("red_asterisk.png") no-repeat scroll 98% center #fff;
+    background: asset-data-url("red_asterisk.png") no-repeat scroll 98% center #fff;
 }
 
 .contact_form input:required:valid,
 .contact_form textarea:required:valid,
 .contact_form select:required:valid,
 input[type="checkbox"]:checked {
-    background: url("valid.png") no-repeat scroll 98% center #fff;
+    background: asset-data-url("valid.png") no-repeat scroll 98% center #fff;
     border-color: #28921f;
     box-shadow: 0 0 5px #5cd053;
 }
@@ -966,7 +965,7 @@ input[type="checkbox"]:checked {
 .contact_form input:focus:invalid,
 .contact_form textarea:focus:invalid,
 .contact_form select:focus:invalid {
-    background: url("invalid.png") no-repeat scroll 98% center #fff;
+    background: asset-data-url("invalid.png") no-repeat scroll 98% center #fff;
     border-color: #b03535;
     box-shadow: 0 0 5px #d45252;
 }
