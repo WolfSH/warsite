@@ -33,13 +33,13 @@ gem 'puma'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-# group :production, :staging do
-#   gem "pg"
-# end
+group :production, :staging do
+  gem "pg"
+end
 
-# group :development, :test do
-#   gem "sqlite3-ruby", "~> 1.3.0", :require => "sqlite3"
-# end
+group :development, :test do
+  gem "sqlite3-ruby", "~> 1.3.0", :require => "sqlite3"
+end
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
