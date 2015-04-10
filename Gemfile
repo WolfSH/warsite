@@ -31,7 +31,7 @@ gem 'puma'
 # gem 'capistrano-rails', group: :development
 
 group :production, :staging do
-  gem "pg"
+  # gem "pg"
   gem "rails_12factor"
 end
 
@@ -51,4 +51,4 @@ group :development, :test do
 end
 
 # ruby version
-ruby "2.2.0"
+ruby "2.2.1"
