@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Головна</title>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <meta name="description" content="Головна" />
+    <meta name="keywords" content="КПІ, Військова підготовка, Военка, Военная кафедра , Факультет військової підготовки " />
+    <meta name='yandex-verification' content='58076d6e0bb41f04' />
+    <link rel="shortcut icon" href="http://fvp.kpi.ua/templates/default/img/favicon.ico" />
+    <!-- <link href="http://fvp.kpi.ua/templates/default/style.css" rel="stylesheet" type="text/css" /> -->
+    <!-- <link type="text/css" href="http://fvp.kpi.ua/css/jquery.lightbox.css" rel="stylesheet" /> -->
+    <%= stylesheet_link_tag 'jQuery/jquery.lightbox.css' %>
+    <!-- <link type="text/css" href="http://fvp.kpi.ua/css/jquery-ui-1.8.20.custom.css" rel="stylesheet" /> -->
+    <%= stylesheet_link_tag 'jQuery/jquery-ui-1.8.20.custom.css' %>
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script>
+    !window.jQuery && document.write('<script type="text/javascript" src="scripts/jquery-1.7.2.min.js"><\/script>')
+    </script>
+    <!-- <script src="http://fvp.kpi.ua/js/jquery.lightbox.js" type="text/javascript"></script> -->
+    <%= javascript_include_tag 'jQuery/jquery.lightbox.js' %>
+    <!-- <script src="http://fvp.kpi.ua/js/jquery-ui-1.8.20.custom.min.js" type="text/javascript"></script> -->
+    <%= javascript_include_tag 'jQuery/jquery-ui-1.8.20.custom.min.js' %>
+    <!-- <script src="http://fvp.kpi.ua/js/jquery.cookie.js" type="text/javascript"></script> -->
+    <%= javascript_include_tag 'jQuery/jquery.cookie.js' %>
+    <!-- <script src="http://fvp.kpi.ua/js/jquery.chained.js" type="text/javascript"></script> -->
+    <%= javascript_include_tag 'jQuery/jquery.chained.js' %>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        // Datepicker
+        $('#datepicker').datepicker({
+            inline: true,
+            onSelect: function(dateText, inst) {
+                $.ajax({
+                    url: "http://fvp.kpi.ua/pages/scheduler/" + dateText,
+                    dataType: "html",
+                    beforeSend: function() {},
+                    success: function(data) {
+                        $('#file-links').html(data);
+                    }
+                });
+                return false;
+            },
+            // Полные имена дней недели
+            dayName: ['Неділя', 'Понеділок', 'Вівторок', 'Середа', 'Четверг', 'П\'ятниця', 'Субота'],
+            // Сокращенные имена дней недели
+            dayNamesMin: ['Нд', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
+            // Название месяцев
+            monthNames: ['Січень', 'Лютий', 'Березень', 'Квітень', 'Травень', 'Червень', 'Липень', 'Серпень', 'Вересень', 'Жовтень', 'Листопад', 'Грудень'],
+            // Сокращенные названия месяцев
+            monthNamesShort: ['Січень', 'Лютий', 'Березень', 'Квітень', 'Травень', 'Червень', 'Липень', 'Серпень', 'Вересень', 'Жовтень', 'Листопад', 'Грудень'],
+            // Формат даты, например 27/04/2011
+            dateFormat: 'dd/mm/yy',
+            // Первый день недели, 0 - воскресенье.
+            firstDay: 1
+        });
+        // var firstView = $.cookie('firstView');
+        // if ( firstView === undefined ) {
+        //  $.cookie('firstView', '0', { path: '/' });
+        //     window.location = "http://fvp.kpi.ua/materials/show/17";
+        // }
+    });
+    </script>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+</head>
+<body>
+    <div id="wrap">
+        <div id="wrap-main">
+            <div id="wrap-sup">
+                <div id="header">
+                    <div id="logo_fvp"></div>
+                    <div id="slogan"></div>
+                    <div id="logo_embl"></div>
+                    <div id="tabs">
+
+                        <table>
+                            <tr>
+                                <td>
+                                    <ul>
+                                        <li>
+                                            <%= link_to top_menu_main_path do %>
+                                                <span class="title">Головна</span>
+                                                <span class="text">Ласкаво просимо!</span>
+                                            <% end %>
+                                        </li>
+                                        <li class="hot">
+                                            <%= link_to top_menu_advertisement_path do %>
+                                                <span class="title">Оголошення</span>
+                                                <span class="text">Важлива інформація</span>
+                                            <% end %>
+                                        </li>
+                                        <li>
+                                            <%= link_to top_menu_news_path do %>
+                                                <span class="title">Новини</span>
+                                                <span class="text">Останні події</span>
+                                            <% end %>
+                                        </li>
+                                        <li>
+                                            <%= link_to top_menu_contacts_path do %>
+                                                <span class="title">Контакти</span>
+                                                <span class="text">Як нас знайти?</span>
+                                            <% end %>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="centertop">
+        <div id="centertop-main">
+            <div id="mainframe">
+                <div id="leftpanel">
+                    <div id="leftpanel_top">
+                        <div id="leftpanel_bottom">
+                            <div id="leftpanel_center">
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <%= link_to 'Історія кафедри', left_menu_history_of_faculty_path, class: 'main_post' %>
+                                            <%= link_to 'Керівний склад', left_menu_management_team_path, class: 'main_post' %>
+                                            <%= link_to 'Навчально-допоміжний склад', left_menu_educational_and_support_path, class: 'main_post' %>
+                                            <%= link_to 'Умови вступу', left_menu_conditions_of_entry_path, class: 'main_post' %>
+                                            <%= link_to 'Навчальний процес', left_menu_learning_process_path, class: 'main_post' %>
+                                            <%# link_to 'Питання та відповіді', left_menu_faq_path, class: 'main_post' %>
+                                            <%= link_to 'Корисні посилання', left_menu_useful_links_path, class: 'main_post' %>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h2 class="sidebartitle_left">Предметно методичні комісії</h2>
+                                            <%= link_to 'Загальновійськові дисципліни', chair_number44_path, class: 'kafedri' %>
+                                            <%= link_to 'Тактика', chair_number46_path, class: 'kafedri' %>
+                                            <%= link_to 'Бойове застосування озброєння військ ППО СВ', chair_number41_path, class: 'kafedri' %>
+                                            <%= link_to 'Бойове застосування озброєння Повітяних сил', chair_number42_path, class: 'kafedri' %>
+                                            <%# link_to 'Кафедра №45', chair_number45_path, class: 'kafedri' %>
+                                            <%# link_to 'Кафедра №46', chair_number46_path, class: 'kafedri' %>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="wrapper">
+                    <div id="content">
+                        <%= yield %>
+                    </div>
+                </div>
+                <div id="rightpanel">
+                    <div id="rightpanel_top">
+                        <div id="rightpanel_bottom">
+                            <div id="rightpanel_center">
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <h2 class="sidebartitle_right">&lowast; Популярні новини &lowast;</h2>
+                                            <%= link_to 'Оплата за навчання', right_menu_payment_path, class: 'pop_post news-8' %>
+                                            <%= link_to 'Довідка з висновком військово-лікарської комісії', right_menu_medical_examination_certificate_path, class: 'pop_post news-9' %>
+                                            <%= link_to 'Напрями та спеціальності підготовки', right_menu_specialties_path, class: 'pop_post news-14' %>
+                                            <%= link_to right_menu_law_on_military_duty_path, class: 'pop_post news-13' do %>
+                                                ЗАКОН УКРАЇНИ
+                                                <br>Про військовий обов'язок і військову службу
+                                            <% end %>
+                                            <!-- <a class="pop_post news-8" href="http://fvp.kpi.ua/materials/show/8">Оплата за навчання </a>
+                                            <a class="pop_post news-9" href="http://fvp.kpi.ua/materials/show/9">Довідка з висновком військово-лікарської комісії</a>
+                                            <a class="pop_post news-14" href="http://fvp.kpi.ua/materials/show/14">Напрями та спеціальності підготовки</a>
+                                            <a class="pop_post news-13" href="http://fvp.kpi.ua/materials/show/13">ЗАКОН УКРАЇНИ <br> Про військовий обов'язок і військову службу</a> -->
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <table class="photo" style="width : 170px ">
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="photo">
+                                                            <a class="lightbox-enabled" title="Взірцева форма одягу для студентів факультету військової підготовки" href="/img/materials/md_DressCode.jpg" rel="lightbox">
+                                                                <img class="scaled" alt="Факультет військової підготовки НТУУ КПІ" src="../../img/materials/tn_DressCode.jpg" />
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="photo">Взірцева форма одягу для студентів факультету військової підготовки</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="centerftr">
+        <div id="centerftr-main">
+            <div id="footer">
+                <table>
+                    <tr>
+                        <td>
+                            <%= link_to 'Головна', top_menu_main_path %>
+                            <%= link_to 'Оголошення', top_menu_advertisement_path %>
+                            <%= link_to 'Новини', top_menu_news_path %>
+                            <%= link_to 'Контакти', top_menu_contacts_path %>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>FVP.KPI.UA 2015</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+    (function(d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter21635110 = new Ya.Metrika({
+                    id: 21635110,
+                    webvisor: true,
+                    clickmap: true,
+                    trackLinks: true,
+                    accurateTrackBounce: true
+                });
+            } catch (e) {}
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function() {
+                n.parentNode.insertBefore(s, n);
+            };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else {
+            f();
+        }
+    })(document, window, "yandex_metrika_callbacks");
+    </script>
+    <noscript>
+        <div><img src="//mc.yandex.ru/watch/21635110" style="position:absolute; left:-9999px;" alt="" /></div>
+    </noscript>
+    <!-- /Yandex.Metrika counter -->
+</body>
+</html>
