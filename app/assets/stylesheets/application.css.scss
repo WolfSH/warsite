@@ -58,17 +58,14 @@ body {
                 >a {
                     line-height: 90px;
                 }
-                -webkit-transition: all .4s ease-in-out;
-                -moz-transition: all .4s ease-in-out;
-                transition: all .4s ease-in-out;
+                // -webkit-transition: all .4s ease-in-out;
+                // -moz-transition: all .4s ease-in-out;
+                // transition: all .4s ease-in-out;
                 a {
                     color: #353535;
                 }
                 &:hover,
                 &:focus {
-                    -webkit-transition: all .4s ease-in-out;
-                    -moz-transition: all .4s ease-in-out;
-                    transition: all .4s ease-in-out;
                     box-shadow: 0 1px 3px 0 rgba(12, 12, 12, 0.2);
                     background-color: #A7A37E;
                     a {
@@ -158,8 +155,9 @@ nav {
         margin: 0 auto;
         background-color: #fff;
         .content-head {
-            font-family: 'Open Sans Condensed', sans-serif;
-            font-family: 'Kelly Slab', cursive;
+            // font-family: 'Open Sans Condensed', sans-serif;
+            // font-family: 'Kelly Slab', cursive;
+            font-family: 'Ubuntu', 'Open Sans', sans-serif;
             text-align: center;
             background-color: #353535;
             color: rgb(255, 255, 255);
