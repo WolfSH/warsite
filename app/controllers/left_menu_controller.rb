@@ -1,29 +1,15 @@
 class LeftMenuController < ApplicationController
-    def historyOfFaculty
+
+    def educational_and_support
 
     end
 
-    def managementTeam
+    def learning_process
 
     end
 
-    def educationalAndSupport
+    def useful_links
 
     end
 
-    def conditionsOfEntry
-
-    end
-
-    def learningProcess
-
-    end
-
-    def faq
-
-    end
-
-    def usefulLinks
-
-    end
 end

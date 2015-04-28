@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class RightMenuControllerTest < ActionController::TestCase
+class AboutUsControllerTest < ActionController::TestCase
   # test "the truth" do
   #   assert true
   # end

@@ -1,25 +1,17 @@
 class ChairController < ApplicationController
-    def number41
+    def combat_use_of_weapons_of_anti_air_forces
 
     end
 
-    def number42
+    def combat_use_of_weapons_of_air_forces
 
     end
 
-    def number43
+    def total_military_discipline
 
     end
 
-    def number44
-
-    end
-
-    def number45
-
-    end
-
-    def number46
+    def tactics
 
     end
 end

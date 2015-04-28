@@ -3,35 +3,34 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'top_menu#index'
+  root 'about_us#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
-  get 'top_menu/index'
-  get 'top_menu/main' => 'top_menu#index'
-  get 'top_menu' => 'top_menu#index'
-  get 'top_menu/advertisement'
-  get 'top_menu/news'
-  get 'top_menu/contacts'
 
-  get 'left_menu/history_of_faculty'
-  get 'left_menu/management_team'
   get 'left_menu/educational_and_support'
-  get 'left_menu/conditions_of_entry'
   get 'left_menu/learning_process'
-  get 'left_menu/faq'
   get 'left_menu/useful_links'
-  get 'chair/number41'
-  get 'chair/number42'
-  get 'chair/number43'
-  get 'chair/number44'
-  get 'chair/number45'
-  get 'chair/number46'
 
-  get 'right_menu/payment'
-  get 'right_menu/medical_examination_certificate'
-  get 'right_menu/specialties'
-  get 'right_menu/law_on_military_duty'
+  get 'about_us/advertisement'
+  get 'about_us/news'
+  get 'contacts', to: 'about_us#contacts', as: 'contacts'
+  get 'history', to: 'about_us#history_of_faculty', as: 'history'
+  get 'management-team', to: 'about_us#management_team', as: 'management_team'
+
+  get 'about_us/download/:file', to: 'about_us#download', as: 'download'
+
+  get 'chair/combat-use-of-weapons-of-anti-air-forces', to: 'chair#combat_use_of_weapons_of_anti_air_forces', as: 'chair_combat_use_of_weapons_of_anti_air_forces'
+  get 'chair/combat-use-of-weapons-of-air-forces', to: 'chair#combat_use_of_weapons_of_air_forces', as: 'chair_combat_use_of_weapons_of_air_forces'
+  get 'chair/total-military-discipline', to: 'chair#total_military_discipline', as: 'chair_total_military_discipline'
+  get 'chair/tactics'
+
+  get 'for-listener/payment', to: 'for_listener#payment', as: 'for_listener_payment'
+  get 'for-listener/medical-examination-certificate', to: 'for_listener#medical_examination_certificate', as: 'for_listener_medical_examination_certificate'
+  get 'for-listener/specialties', to: 'for_listener#specialties', as: 'for_listener_specialties'
+  get 'for-listener/law-on-military-duty', to: 'for_listener#law_on_military_duty', as: 'for_listener_law_on_military_duty'
+  get 'for-listener/conditions-of-entry', to: 'for_listener#conditions_of_entry', as: 'for_listener_conditions_of_entry'
+  get 'faq', to: 'for_listener#faq', as: 'for_listener_faq'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase

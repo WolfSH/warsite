@@ -25,14 +25,13 @@ body {
             padding-left: 0;
             padding: 0;
             background-color: #efecca;
-            @media(min-width: 1280px) {
+            @media (min-width: 1280px) {
                 width: 1200px;
             }
-            @media(max-width:1024px) {
+            @media (max-width: 1024px) {
                 width: 900px;
             }
             margin: 0 50px;
-            ;
             #about-menu,
             #abiturient-menu,
             #contacts-menu,
@@ -55,7 +54,7 @@ body {
             #abiturient-menu,
             #contacts-menu,
             #faq {
-                >a {
+                > a {
                     line-height: 90px;
                 }
                 // -webkit-transition: all .4s ease-in-out;
@@ -74,10 +73,10 @@ body {
                 }
             }
             #contacts-menu {
-                @media(min-width: 1280px) {
+                @media (min-width: 1280px) {
                     margin-right: 25px;
                 }
-                @media(max-width:1024px) {
+                @media (max-width: 1024px) {
                     margin-right: 0;
                 }
             }
@@ -95,7 +94,7 @@ nav {
         li {
             float: left;
             &:hover {
-                background: rgba(0, 0, 0, .15);
+                background: rgba(0, 0, 0, 0.15);
                 > ul {
                     display: block;
                     padding: 0;
@@ -112,9 +111,11 @@ nav {
             background-color: #A7A37E;
             display: none;
             position: absolute;
+            // z-index to overlay yandex.map
+            z-index: 520;
             // top: 95%;
             // box-shadow: -3px 3px 10px -2px rgba(0, 0, 0, .1);
-            border: 1px solid rgba(0, 0, 0, .1);
+            border: 1px solid rgba(0, 0, 0, 0.1);
             margin-left: -20px;
             li {
                 float: none;
@@ -122,11 +123,11 @@ nav {
                 .main_post {
                     font-size: 14px !important;
                     padding: 10px 20px 10px 20px;
-                    border-bottom: 1px solid rgba(0, 0, 0, .05);
+                    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
                 }
             }
             ul {
-                position: absolute;
+                position: absolute; // for what??
                 left: 100%;
                 top: 0;
                 margin-left: 0;
@@ -146,10 +147,10 @@ nav {
 
 #wrapper {
     #content {
-        @media(min-width: 1280px) {
+        @media (min-width: 1280px) {
             width: 1100px;
         }
-        @media(max-width:1024px) {
+        @media (max-width: 1024px) {
             width: 900px;
         }
         margin: 0 auto;
@@ -216,7 +217,7 @@ nav {
             }
         }
         .q1 {
-            background-image: asset-data-url('bg2.png');
+            background-image: asset-data-url("bg2.png");
             .q11 {
                 background-color: rgba(255, 255, 255, 1);
                 padding: 40px 100px;
