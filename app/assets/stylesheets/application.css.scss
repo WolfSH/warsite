@@ -148,8 +148,6 @@ nav {
         margin: 0 auto;
         background-color: #fff;
         .content-head {
-            // font-family: 'Open Sans Condensed', sans-serif;
-            // font-family: 'Kelly Slab', cursive;
             font-family: 'Ubuntu', 'Open Sans', sans-serif;
             text-align: center;
             background-color: #353535;
@@ -161,12 +159,6 @@ nav {
                 font-size: 20px;
             }
         }
-        // .content-head.main {
-        //     background-color: rgba(199, 196, 162, 0.56);
-        //     h3 {
-        //         color: #353535;
-        //     }
-        // }
         .content-body {
             // @media (min-height: 1025px) {
             //     min-height: 1080px;
@@ -189,9 +181,6 @@ nav {
             padding-right: 60px;
             .title-item {
                 font-size: 18px;
-                // padding-left: 30px;
-                // padding-right: 30px;
-
             }
             .item-comment {
                 font-family: 'Roboto Condensed', sans-serif;
@@ -255,57 +244,27 @@ footer {
     }
     display: block;
 }
-
-// .center {
-//     text-align: center;
-// }
-// .right-photo {
-//     margin: 0 0 0 auto;
-// }
 .full-photo-container {
-    margin-top: 50px;
+    margin: 30px 0;
+    position: relative;
     .full-photo {
         width: 100%;
     }
     .full-photo-title {
+        width: 100%;
         padding: 20px 0 20px 0;
-        position: relative;
-        bottom: 65px;
+        position: absolute;
+        bottom: 0;
         background-color: rgba(255, 255, 255, 0.5);
         margin: 0;
-        // p {
         font-size: 18px;
         text-align: center;
-        // }
+    }
 
-    }
-    .full-photo-title-2 {
-        padding: 15px 0 15px 0;
-        position: relative;
-        bottom: 76px;
-        background-color: rgba(255, 255, 255, 0.5);
-        margin: 0;
-        font-size: 18px;
-        text-align: center;
-    }
-    .full-photo-title-3 {
-        padding: 12px 0 12px 0;
-        position: relative;
-        bottom: 78px;
-        background-color: rgba(255, 255, 255, 0.5);
-        margin: 0;
-        font-size: 15px;
-        text-align: center;
-    }
     .head-photo {
         width: 50%;
-        // position: inline;
         margin: 0 25%;
     }
-}
-
-.after-full-photo {
-    margin-top: 0;
 }
 
 .answer {
