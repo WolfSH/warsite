@@ -21,5 +21,7 @@ class ForListenerController < ApplicationController
 
     def conditions_of_entry
         @application = 'zayava2015.doc'
+        @schedule_selections = 'Графік конкурсного відбору_2015.xlsx'
+        @announcement = 'Оголошення про конкурсний відбір 2015.doc'
     end
 end
