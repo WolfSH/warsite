@@ -33,14 +33,15 @@ body {
       body .menu-bar .menu-group #abiturient-menu,
       body .menu-bar .menu-group #contacts-menu,
       body .menu-bar .menu-group #faq {
+        position: relative;
         cursor: pointer;
-        padding-left: 20px;
-        padding-right: 20px;
         display: inline-block; }
         body .menu-bar .menu-group #about-menu a,
         body .menu-bar .menu-group #abiturient-menu a,
         body .menu-bar .menu-group #contacts-menu a,
         body .menu-bar .menu-group #faq a {
+          padding-left: 20px;
+          padding-right: 20px;
           font-weight: 500;
           font-size: 18px;
           text-decoration: none;
@@ -99,12 +100,12 @@ nav {
         text-decoration: none; }
     nav ul ul {
       max-width: 220px;
+      min-width: 200px;
       background-color: #A7A37E;
       display: none;
       position: absolute;
       z-index: 520;
-      border: 1px solid rgba(0, 0, 0, 0.1);
-      margin-left: -20px; }
+      border: 1px solid rgba(0, 0, 0, 0.1); }
       nav ul ul li {
         float: none;
         position: relative; }
@@ -119,6 +120,11 @@ nav {
         margin-left: 0; }
     nav ul #brand-li:hover {
       background-color: rgba(239, 236, 202, 0); }
+
+.menu-item {
+  display: inline-block;
+  width: auto;
+  height: 100%; }
 
 .brand img {
   margin: 5px 15px 5px 0; }
@@ -196,39 +202,22 @@ footer {
     display: inline-block; }
 
 .full-photo-container {
-  margin-top: 50px; }
+  margin: 30px 0;
+  position: relative; }
   .full-photo-container .full-photo {
     width: 100%; }
   .full-photo-container .full-photo-title {
+    width: 100%;
     padding: 20px 0 20px 0;
-    position: relative;
-    bottom: 65px;
+    position: absolute;
+    bottom: 0;
     background-color: rgba(255, 255, 255, 0.5);
     margin: 0;
     font-size: 18px;
-    text-align: center; }
-  .full-photo-container .full-photo-title-2 {
-    padding: 15px 0 15px 0;
-    position: relative;
-    bottom: 76px;
-    background-color: rgba(255, 255, 255, 0.5);
-    margin: 0;
-    font-size: 18px;
-    text-align: center; }
-  .full-photo-container .full-photo-title-3 {
-    padding: 12px 0 12px 0;
-    position: relative;
-    bottom: 78px;
-    background-color: rgba(255, 255, 255, 0.5);
-    margin: 0;
-    font-size: 15px;
     text-align: center; }
   .full-photo-container .head-photo {
     width: 50%;
     margin: 0 25%; }
-
-.after-full-photo {
-  margin-top: 0; }
 
 .answer {
   padding-left: 60px; }
