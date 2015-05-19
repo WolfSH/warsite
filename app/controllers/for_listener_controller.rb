@@ -16,7 +16,7 @@ class ForListenerController < ApplicationController
     end
 
     def faq
-
+        @question = Question.new
     end
 
     def conditions_of_entry

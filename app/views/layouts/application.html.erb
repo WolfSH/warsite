@@ -40,6 +40,7 @@
             <%= link_to 'Про нас', root_path, class: 'menu-item' %>
             <ul>
               <li><%= link_to 'Історія кафедри', history_path, class: 'main_post' %></li>
+              <li><%= link_to 'На захисті Батьківщини', '#', class: 'main_post' %></li>
               <li><%= link_to 'Керівний склад', management_team_path, class: 'main_post' %></li>
               <!-- <li><%#= link_to 'Навчально-допоміжний склад', left_menu_educational_and_support_path, class: 'main_post' %></li> -->
               <!-- <li><%# link_to 'Навчальний процес', left_menu_learning_process_path, class: 'main_post' %></li> -->
@@ -52,6 +53,9 @@
                 </ul>
               </li>
             </ul>
+          </li>
+          <li id="abiturient-menu">
+            <%= link_to "Новини", '#', class: 'menu-item' %>
           </li>
           <li id="abiturient-menu">
             <a class="menu-item" href="#">Вступнику</a>
@@ -76,6 +80,10 @@
       <div id="content">
         <%= yield %>
         <footer>
+         <!--  <a href="http://www.mil.gov.ua/">Міністерство оборони України</a>
+          <a href="http://www.mil.gov.ua/ministry/sklad-zbrojnix-sil-ukraini/suhoputni-vijska.html">Сухопутні війська</a>
+          <a href="http://www.mil.gov.ua/ministry/sklad-zbrojnix-sil-ukraini/povitryani-sili.html">Повітряні Сили</a>
+          <a href="http://kpi.ua/">КПІ</a> -->
           <p>Кафедра військової підготовки. 2015</p>
           <!-- <p class="design">Designed by Anastasiya Lisovska</p> -->
         </footer>

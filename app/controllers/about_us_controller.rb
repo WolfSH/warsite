@@ -1,5 +1,8 @@
 class AboutUsController < ApplicationController
     def index
+        # respond_to do |format|
+        #     format.js { render action: index }
+        # end
     end
 
     def advertisement

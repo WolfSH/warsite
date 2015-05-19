@@ -31,15 +31,45 @@
     </p>
   <p class="title-item">
     <strong>
-        Чи може студент іншого ВНЗ, поступити на факультет Військової
+      Чи може студент іншого ВНЗ, поступити на факультет Військової
         підготовки на 3-му курсі?
     </strong>
   </p>
   <p class="answer">
     Так, студенти інших ВНЗ та студенти старших курсів можуть брати участь у конкурсі.
-    </p>
-  <!-- <form method="post" action="http://fvp.kpi.ua/pages/faq">
-=======
+  </p>
+
+  <!-- <%= form_tag 'question/create', method: 'post', class: 'ask_question_form' do %>
+	<%= label_tag :asker_name, "Ім’я" %>
+    <%= text_field :question, :asker_name %>
+    <br>
+    <%= label_tag :asker_email, "email" %>
+    <%= text_field :question, :asker_email %>
+    <br>
+    <%= label_tag :question, "Ваше питання" %>
+    <br>
+    <%= text_area :question, :question %>
+    <%= submit_tag 'Задати питання' %>
+  <% end %> -->
+
+	<br>
+	<br>
+	<hr>
+
+  <%= form_for(@question, remote: true, url: {controller: 'question',action: 'create'},
+  	html: {class: 'ask_question_form'}) do |f| %>
+  	<%= f.label :asker_name, 'Ім’я', class: 'label-faq' %>
+	<%= f.text_field :asker_name %>
+	<br>
+	<%= f.label :asker_email, 'Email', class: 'label-faq' %>
+	<%= f.text_field :asker_email %>
+	<br>
+	<%= f.label :question, 'Питання', class: 'label-faq' %>
+	<%= f.text_area :question %>
+	<%= f.submit 'Спитати' %>
+  <% end %>
+
+<!--
     <div class="pagination">
     </div>
     <div class="faq">
@@ -62,31 +92,6 @@
     <p>
         Якщо студент був відрахований з основного місця навчання, він може
         продовжити навчання на кафедрі лише якщо він поновився.
-    </p>
+    </p> -->
 
-    <!-- <form method="post" action="http://fvp.kpi.ua/pages/faq">
-        <p>Ваше ім`я
-            <br>
-            <input type="text" value="" name="name">
-            <br>
-            <strong></strong>
-        </p>
-        <p>Текст питання
-            <br>
-            <textarea rows="10" cols="50" name="message"></textarea>
-            <br>
-            <strong></strong>
-        </p>
-        <p>Введіть цифри з картинки:</p>
-        <p><img width="120" height="30" alt=" " style="border:0;" src="http://fvp.kpi.ua/img/captcha/1427790172.0388.jpg"></p>
-        <p>
-            <input type="text" size="10" name="captcha">
-            <br>
-            <strong></strong>
-        </p>
-        <p>
-            <input type="submit" value="Задати питання!" name="send_message">
-        </p>
-    </form>
-    <p><a href="#top" style="color: #fcffe8;">Вгору!</a></p> -->
 </div>
