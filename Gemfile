@@ -51,4 +51,4 @@ group :development, :test do
 end
 
 # ruby version
-ruby "2.2.0"
+ruby "2.2.1"
