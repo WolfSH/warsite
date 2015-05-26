@@ -6,4 +6,4 @@ $(document).ready ->
   $("#new_question").on("ajax:success", (e, data, status, xhr) ->
     $("#new_question").append "<p>SUCCESS</p>"
   ).on "ajax:error", (e, xhr, status, error) ->
-    $("#nnew_question").append "<p>ERROR</p>"
+    $("#new_question").append "<p>ERROR</p>"
