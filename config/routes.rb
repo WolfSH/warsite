@@ -19,7 +19,7 @@ Rails.application.routes.draw do
   get 'left_menu/useful_links'
 
   get 'about_us/advertisement'
-  get 'about_us/news'
+  get 'news', to: 'about_us#news', as: 'news'
   get 'contacts', to: 'about_us#contacts', as: 'contacts'
   get 'history', to: 'about_us#history_of_faculty', as: 'history'
   get 'management-team', to: 'about_us#management_team', as: 'management_team'

@@ -33,7 +33,7 @@
         <ul class="menu-group">
           <li id="brand-li">
             <%= link_to root_path, class: 'brand' do %>
-              <%= image_tag("log.png",  :alt => "Brand") %>
+              <%= image_tag("shevron.png",  :alt => "Brand") %>
             <% end %>
           </li>
           <li id="about-menu">
@@ -41,7 +41,7 @@
             <ul>
               <li><%= link_to 'Історія кафедри', history_path, class: 'main_post' %></li>
               <li><%= link_to 'На захисті Батьківщини', '#', class: 'main_post' %></li>
-              <li><%= link_to 'Керівний склад', management_team_path, class: 'main_post' %></li>
+              <li><%= link_to 'Керівний склад', '#', class: 'main_post' %></li>
               <!-- <li><%#= link_to 'Навчально-допоміжний склад', left_menu_educational_and_support_path, class: 'main_post' %></li> -->
               <!-- <li><%# link_to 'Навчальний процес', left_menu_learning_process_path, class: 'main_post' %></li> -->
               <li><a class='main_post'>Предметно методичні комісії</a>
@@ -55,7 +55,7 @@
             </ul>
           </li>
           <li id="abiturient-menu">
-            <%= link_to "Новини", '#', class: 'menu-item' %>
+            <%= link_to "Новини", news_path, class: 'menu-item' %>
           </li>
           <li id="abiturient-menu">
             <a class="menu-item" href="#">Вступнику</a>

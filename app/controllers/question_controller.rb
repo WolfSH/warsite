@@ -1,6 +1,7 @@
 class QuestionController < ApplicationController
   def create
     @question = Question.create(question_params)
+    AskQuestionMailer.send_question_email(params).deliver_now
     # respond_to do |format|
     #     if @question.save
     #         format.js {  }
