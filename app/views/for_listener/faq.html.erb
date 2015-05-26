@@ -1,0 +1,97 @@
+<% content_for :title do %>
+  Питання та відповіді
+<% end %>
+<div class="content-head">
+  <h3>Питання та відповіді</h3>
+</div>
+<div class="content-body">
+  <div class="pagination">
+  </div>
+  <div class="faq">
+  </div>
+  <div class="pagination">
+  </div>
+  <p class="title-item"><strong>Який термін навчання на військовій кафедрі?</strong></p>
+  <p class="answer">
+    ІНСТРУКЦІЯ про організацію підготовки офіцерів запасу з числа студентів
+    вищих навчальних закладів:
+    <br>
+    "3.4. Військова підготовка студентів, як правило, планується та проводиться
+    один навчальний день на тиждень (методом "військового дня") протягом
+    двох-трьох років навчання і завершується за рік до закінчення ВНЗ."
+    <a href="http://zakon.rada.gov.ua/cgi-bin/laws/main.cgi?page=1&nreg=z1509-04#sthash.OlZf1IyK.dpuf" title="">http://zakon.rada.gov.ua/cgi-bin/laws/main.cgi?page=1&nreg=z1509-04#sthash.OlZf1IyK.dpuf</a>
+  </p>
+  <p class="title-item">
+    <strong>Де можна дізнатися чи зарахований я на військову кафедру,
+    якщо з'явитися в день оголошення результатів конкурсу не було можливості?
+    </strong>
+  </p>
+  <p class="answer">
+    Зверніться у деканат свого факультета.
+    </p>
+  <p class="title-item">
+    <strong>
+      Чи може студент іншого ВНЗ, поступити на факультет Військової
+        підготовки на 3-му курсі?
+    </strong>
+  </p>
+  <p class="answer">
+    Так, студенти інших ВНЗ та студенти старших курсів можуть брати участь у конкурсі.
+  </p>
+
+  <!-- <%= form_tag 'question/create', method: 'post', class: 'ask_question_form' do %>
+	<%= label_tag :asker_name, "Ім’я" %>
+    <%= text_field :question, :asker_name %>
+    <br>
+    <%= label_tag :asker_email, "email" %>
+    <%= text_field :question, :asker_email %>
+    <br>
+    <%= label_tag :question, "Ваше питання" %>
+    <br>
+    <%= text_area :question, :question %>
+    <%= submit_tag 'Задати питання' %>
+  <% end %> -->
+
+	<br>
+	<br>
+	<hr>
+
+  <%= form_for(@question, remote: true, url: {controller: 'question',action: 'create'},
+  	html: {class: 'ask_question_form'}) do |f| %>
+  	<%= f.label :asker_name, 'Ім’я', class: 'label-faq' %>
+	<%= f.text_field :asker_name %>
+	<br>
+	<%= f.label :asker_email, 'Email', class: 'label-faq' %>
+	<%= f.text_field :asker_email %>
+	<br>
+	<%= f.label :question, 'Питання', class: 'label-faq' %>
+	<%= f.text_area :question %>
+	<%= f.submit 'Спитати' %>
+  <% end %>
+
+<!--
+    <div class="pagination">
+    </div>
+    <div class="faq">
+    </div>
+    <div class="pagination">
+    </div>
+    <p>
+        Чи буде літній добір?
+        Якщо будуть вільні місця після весіннього відбору - буде. Уточнюйте за
+        номером 406-85-88 (завідувач кафедри). Орієнтовна дата - серпень.
+    </p>
+    <p>
+        Чи може студент першого курсу поступити на кафедру військової відготовки?
+        Ні. Лише другий та третій курси.
+    </p>
+    <p>
+        На кафедру приймаються лише студенти КПІ?
+        На кафедру можуть поступати студенти будь-яких ВУЗів.
+    </p>
+    <p>
+        Якщо студент був відрахований з основного місця навчання, він може
+        продовжити навчання на кафедрі лише якщо він поновився.
+    </p> -->
+
+</div>

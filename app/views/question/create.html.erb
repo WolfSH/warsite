@@ -1,0 +1,11 @@
+<% if @question.errors.any? %>
+    ERRORRRR
+    <ul>
+    <% @question.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+<% end %>
+<p><%= @question.asker_name %></p>
+<p><%= @question.asker_email %></p>
+<p><%= @question.question %></p>
