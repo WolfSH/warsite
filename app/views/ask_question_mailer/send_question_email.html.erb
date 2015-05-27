@@ -1,1 +1,11 @@
-Success html
+<% unless @question_info.asker_name.nil? %>
+    Ім’я: <%= @question_info.asker_name %>
+<% end %>
+<% unless @question_info.asker_email.nil? %>
+    email: <%= @question_info.asker_email %>
+<% end %>
+<p>
+    Питання:
+    <br>
+    <%= @question_info.question %>
+</p>

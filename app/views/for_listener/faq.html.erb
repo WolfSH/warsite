@@ -53,10 +53,16 @@
   <% end %> -->
 
 	<br>
+  <% if flash[:alert] %>
+    <p class="red center"><%= flash[:alert] %></p>
+  <% end %>
+  <% if flash[:notice] %>
+    <p class="red center"><%= flash[:notice] %></p>
+  <% end %>
 	<br>
 	<hr>
-
-  <%= form_for(@question, remote: true, url: {controller: 'question',action: 'create'},
+<!-- , remote: true -->
+  <%= form_for(@question, url: {controller: 'question',action: 'create'},
   	html: {class: 'ask_question_form'}) do |f| %>
   	<%= f.label :asker_name, 'Ім’я', class: 'label-faq' %>
 	<%= f.text_field :asker_name %>
